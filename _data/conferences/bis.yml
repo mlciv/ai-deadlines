@@ -1,0 +1,11 @@
+- title: BIS
+  year: 2026
+  id: bis2026
+  link: https://bisconf.org/2026
+  deadline: '2025-01-15 23:59:00'
+  timezone: UTC-12
+  place: Prague, Czech Republic
+  date: Jun 10-12, 2026
+  start: 2026-06-10
+  end: 2026-06-12
+  sub: ['DM', 'KR', 'ML', 'NLP', 'SP', 'CV', 'HCI', 'AP']
