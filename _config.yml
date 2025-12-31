@@ -1,15 +1,15 @@
-title: AI Conference Deadlines
-description: Countdowns to top CV/NLP/ML/Robotics/AI conference deadlines
-author: Jie Cao
-
-domain: "mlciv.com"
-baseurl: "/ai-deadlines"
-
-twitter_hashtag: mlciv_jiessie
-github_username: mlciv
-github_repo: ai-deadlines
-
-markdown: kramdown
-ga_id:
-
 include: ['_pages']
+title: ICDM
+year: 2026
+id: icdm26
+full_name: IEEE International Conference on Data Mining
+link: http://icdm2026.neu.edu.cn/
+abstract_deadline: 2026-05-30 23:59
+deadline: 2026-06-06 23:59
+timezone: Etc/GMT+12  # AOE (Anywhere on Earth)
+place: Shenyang, China
+date: November 12-15, 2026
+start: 2026-11-12
+end: 2026-11-15
+sub: DM
+note: All deadlines are 11:59 PM AOE; abstract required
