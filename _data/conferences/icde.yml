@@ -1,25 +1,14 @@
-- title: ICDE-2
-  year: 2025
-  id: icde25-2
-  link: https://icde2026.github.io/ 
-  deadline: '2025-10-27 23:59:00'
-  abstract_deadline: '2025-10-27 23:59:00'
-  timezone: AoE
-  place: Montreal, Canada
-  date: May 4-8, 2026
-  start: 2026-05-04
-  end: 2026-05-08
+- title: ICDM
+  year: 2026
+  id: icdm26
+  full_name: IEEE International Conference on Data Mining
+  link: http://icdm2026.neu.edu.cn/
+  deadline: 2026-06-06 23:59
+  abstract_deadline: 2026-05-30 23:59
+  timezone: Etc/GMT+12  # AOE (Anywhere on Earth)
+  place: Shenyang, China
+  date: November 12-15, 2026
+  start: 2026-11-12
+  end: 2026-11-15
   sub: DM
-
-- title: ICDE-1
-  year: 2025
-  id: icde25-1
-  link: https://icde2026.github.io/ 
-  deadline: '2025-06-18 23:59:00'
-  abstract_deadline: '2025-06-18 23:59:00'
-  timezone: AoE
-  place: Montreal, Canada
-  date: May 4-8, 2026
-  start: 2026-05-04
-  end: 2026-05-08
-  sub: DM
+  note: All deadlines are 11:59 PM AOE; abstract required
