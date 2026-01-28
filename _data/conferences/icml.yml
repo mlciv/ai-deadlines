@@ -17,9 +17,9 @@
   year: 2026
   id: icml26
   link: https://icml.cc/Conferences/2026/CallForPapers
-  abstract_deadline: '2026-01-23 11:59:00'
-  deadline: '2026-01-28 11:59:00'
-  timezone: America/Los_Angeles
+  abstract_deadline: '2026-01-23 23:59:59'
+  deadline: '2026-01-28 23:59:59'
+  timezone: AoE
   place: Seoul, South Korea
   date: July 6-11, 2026
   start: 2026-07-06

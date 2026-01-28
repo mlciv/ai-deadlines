@@ -1,6 +1,10 @@
 // Borrowed from https://github.com/moment/moment-timezone/issues/167
-// Adds support for time zones 'UTC-12'..'UTC+12'
+// Adds support for time zones 'UTC-12'..'UTC+12' and 'AoE'
 function addUtcTimeZones() {
+  // Add AoE (Anywhere on Earth) timezone alias
+  // AoE is equivalent to UTC-12 (Etc/GMT+12 in POSIX notation)
+  moment.tz.link('Etc/GMT+12|AoE');
+  
   // Moment.js uses the IANA timezone database, which supports generic time zones like 'Etc/GMT+1'.
   // However, the signs for these time zones are inverted compared to ISO 8601.
   // For more details, see https://github.com/moment/moment-timezone/issues/167

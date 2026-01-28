@@ -3,7 +3,7 @@
   id: interspeech26
   link: http://www.interspeech2026.org/
   deadline: '2026-03-02 23:59:59'
-  timezone: UTC-0
+  timezone: UTC+0
   place: Rotterdam, Netherlands
   date: Sept 27 to Oct 01, 2026
   start: 2026-09-27
@@ -15,7 +15,7 @@
   id: interspeech25
   link: http://www.interspeech2025.org/
   deadline: '2025-02-19 23:59:59'
-  timezone: UTC-0
+  timezone: UTC+0
   place: Rotterdam, Netherlands
   date: August 17-22, 2025
   start: 2025-08-17
@@ -28,7 +28,7 @@
   link: http://www.interspeech2024.org/
   deadline: '2024-03-01 23:59:59'
   abstract_deadline: '2024-03-01 23:59:59'
-  timezone: UTC-0
+  timezone: UTC+0
   place: Greece
   date: Spet 1 -5, 2024
   start: 2023-09-01
