@@ -34,6 +34,59 @@ function update_filtering(data) {
   }
 }
 
+// Build a proper .ics file as a Blob URL. The ouical library points its
+// iCal/Outlook links at a `data:text/calendar` URL, which modern browsers
+// block from navigating/downloading — so those links silently do nothing.
+// A Blob URL + a `download` attribute downloads reliably.
+function buildIcsBlobUrl(ev) {
+  function fmt(m) { return m.clone().utc().format("YYYYMMDDTHHmmss") + "Z"; }
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/\\/g, "\\\\")
+      .replace(/;/g, "\\;")
+      .replace(/,/g, "\\,")
+      .replace(/\r?\n/g, "\\n");
+  }
+  var end = ev.start.clone().add(ev.durationMinutes || 60, "minutes");
+  var lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//ai-deadlines//EN",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH",
+    "BEGIN:VEVENT",
+    "UID:" + esc((ev.id || ev.title) + "-" + fmt(ev.start) + "@ai-deadlines"),
+    "DTSTAMP:" + fmt(moment()),
+    "DTSTART:" + fmt(ev.start),
+    "DTEND:" + fmt(end),
+    "SUMMARY:" + esc(ev.title),
+    "DESCRIPTION:" + esc(ev.description),
+    "LOCATION:" + esc(ev.location),
+    "URL:" + esc(ev.url),
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ];
+  var blob = new Blob([lines.join("\r\n")], {
+    type: "text/calendar;charset=utf-8",
+  });
+  return URL.createObjectURL(blob);
+}
+
+// Repoint the iCal/Outlook download links inside a generated calendar widget
+// at a working Blob-backed .ics download.
+function fixIcsDownloads(calendarNode, ev, filename) {
+  if (!calendarNode) return;
+  var url = buildIcsBlobUrl(ev);
+  ["a.icon-ical", "a.icon-outlook"].forEach(function (sel) {
+    var a = calendarNode.querySelector(sel);
+    if (a) {
+      a.href = url;
+      a.setAttribute("download", filename);
+      a.removeAttribute("target");
+    }
+  });
+}
+
 function createCalendarFromObject(data) {
   return createCalendar({
     options: {

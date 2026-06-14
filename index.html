@@ -118,7 +118,8 @@
                     <span class="deadline-time"></span>
                   </div>
                 </div>
-                <div class="calendar"></div>
+                <div class="cal-action"><span class="cal-action-label">Save:</span><div class="calendar"></div></div>
+                <div class="cal-action"><span class="cal-action-label">Share:</span><div class="invite"></div></div>
               </div>
             </div>
             <div class="row">
@@ -230,6 +231,57 @@
             calendarNode.appendChild(myCalendar);
           }
 
+          // "Invite others" — open the user's email app with a pre-filled
+          // message they can send to colleagues, including a one-click
+          // add-to-calendar link so recipients can save the deadline.
+          var confTitle = {{ conf.title | jsonify }};
+          var confYear  = "{{ conf.year }}";
+          var confLink  = {{ conf.link | jsonify }};
+          var confPlace = {{ conf.place | jsonify }} || "TBA";
+          var confTz    = {{ conf.timezone | jsonify }} || "local time";
+
+          var startUTC = confDate.clone().utc().format('YYYYMMDDTHHmmss') + 'Z';
+          var endUTC   = confDate.clone().add(1, 'hours').utc().format('YYYYMMDDTHHmmss') + 'Z';
+          var inviteSubject = confTitle + ' ' + confYear + ' paper deadline';
+          var gcalUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+            + '&text='     + encodeURIComponent(inviteSubject)
+            + '&dates='    + startUTC + '/' + endUTC
+            + '&location=' + encodeURIComponent(confPlace)
+            + '&details='  + encodeURIComponent('Submission deadline for ' + confTitle + ' ' + confYear + '.\n' + confLink);
+
+          var deadlineHuman = confDate.format('dddd, MMMM D, YYYY [at] HH:mm') + ' (' + confTz + ')';
+          var inviteBody = 'Hi,\n\n'
+            + 'Sharing the submission deadline for ' + confTitle + ' ' + confYear + ':\n\n'
+            + 'Deadline: ' + deadlineHuman + '\n'
+            + 'Where: ' + confPlace + '\n'
+            + 'Website: ' + confLink + '\n\n'
+            + 'Add it to your calendar (Google): ' + gcalUrl + '\n\n'
+            + 'Shared via https://mlciv.com/ai-deadlines/';
+          var mailtoUrl = 'mailto:?subject=' + encodeURIComponent(inviteSubject)
+            + '&body=' + encodeURIComponent(inviteBody);
+
+          var inviteLink = document.createElement('a');
+          inviteLink.href = mailtoUrl;
+          inviteLink.className = 'invite-link';
+          inviteLink.title = 'Email this deadline as an invitation to others';
+          inviteLink.setAttribute('aria-label', 'Email this deadline as an invitation to others');
+          inviteLink.innerHTML = '<svg viewBox="2 3 20 18" aria-hidden="true"><path d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2.4 0 7.6 5.3L19.6 5H4.4zM20 7.2l-7.4 5.2a1 1 0 0 1-1.2 0L4 7.2V19h16V7.2z"/></svg><span>Invite</span>';
+          var inviteNode = document.querySelector('#{{conf.id}} .invite');
+          if (inviteNode) {
+            inviteNode.appendChild(inviteLink);
+          }
+
+          // Make the Outlook/iCal .ics download actually work (Blob download).
+          fixIcsDownloads(myCalendar, {
+            id: '{{conf.id}}',
+            title: inviteSubject,
+            start: confDate,
+            durationMinutes: 60,
+            description: 'Submission deadline for ' + confTitle + ' ' + confYear + '. ' + confLink,
+            location: confPlace,
+            url: confLink
+          }, confTitle + '-' + confYear + '.ics');
+
           // check if date has passed, add 'past' class to it
           var today = moment();
           diff = today.diff(confDate, 'days');
@@ -254,6 +306,7 @@
             $('#{{conf.id}} .timer').replaceWith($('#{{conf.id}} .deadline'));
             $('#{{conf.id}} .timer-small').replaceWith($('#{{conf.id}} .deadline'));
             $('#{{conf.id}} .calendar').remove();
+            $('#{{conf.id}} .invite').remove();
             if (diff < 366) {
               $('#{{conf.id}}').appendTo($("#past_confs"))
             } else{
