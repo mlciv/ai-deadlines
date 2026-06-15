@@ -365,15 +365,21 @@ a:focus {
 .cal-action .calendar,
 .cal-action .invite {
   margin-top: 0;
-  display: flex;
-  align-items: center;
+}
+
+/* The calendar widget's icon renders ~4px right of the Invite envelope inside
+   the Save/Share rows; pull it left so both leading icons share one column. */
+.cal-action .add-to-calendar {
+  margin-left: -4px;
 }
 
 /* Center the calendar widget's icon + service links on one line so its
-   leading icon shares the same vertical center as the Invite envelope. */
-.cal-action .add-to-calendar {
+   leading icon shares the same vertical center as the Invite envelope.
+   Applied globally so the individual conference page aligns too. */
+.add-to-calendar {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   line-height: 1;
 }
 
@@ -588,3 +594,4 @@ pre {
     font-size: 28px;
   }
 }
+

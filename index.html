@@ -231,40 +231,51 @@
             calendarNode.appendChild(myCalendar);
           }
 
-          // "Invite others" — open the user's email app with a pre-filled
-          // message they can send to colleagues, including a one-click
-          // add-to-calendar link so recipients can save the deadline.
+          // "Invite others" — open Outlook's built-in "new calendar event"
+          // composer, pre-filled with the deadline and full conference details.
+          // The user adds attendees and clicks Send (no .ics download involved).
           var confTitle = {{ conf.title | jsonify }};
           var confYear  = "{{ conf.year }}";
           var confLink  = {{ conf.link | jsonify }};
           var confPlace = {{ conf.place | jsonify }} || "TBA";
-          var confTz    = {{ conf.timezone | jsonify }} || "local time";
-
-          var startUTC = confDate.clone().utc().format('YYYYMMDDTHHmmss') + 'Z';
-          var endUTC   = confDate.clone().add(1, 'hours').utc().format('YYYYMMDDTHHmmss') + 'Z';
           var inviteSubject = confTitle + ' ' + confYear + ' paper deadline';
-          var gcalUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
-            + '&text='     + encodeURIComponent(inviteSubject)
-            + '&dates='    + startUTC + '/' + endUTC
-            + '&location=' + encodeURIComponent(confPlace)
-            + '&details='  + encodeURIComponent('Submission deadline for ' + confTitle + ' ' + confYear + '.\n' + confLink);
 
-          var deadlineHuman = confDate.format('dddd, MMMM D, YYYY [at] HH:mm') + ' (' + confTz + ')';
-          var inviteBody = 'Hi,\n\n'
-            + 'Sharing the submission deadline for ' + confTitle + ' ' + confYear + ':\n\n'
-            + 'Deadline: ' + deadlineHuman + '\n'
-            + 'Where: ' + confPlace + '\n'
-            + 'Website: ' + confLink + '\n\n'
-            + 'Add it to your calendar (Google): ' + gcalUrl + '\n\n'
-            + 'Shared via https://mlciv.com/ai-deadlines/';
-          var mailtoUrl = 'mailto:?subject=' + encodeURIComponent(inviteSubject)
-            + '&body=' + encodeURIComponent(inviteBody);
+          var inviteDeadlineStr = confDate.format('ddd, MMM D, YYYY, HH:mm') + ' (' + timezone + ')';
+          var inviteAbstractStr = '';
+          {% if conf.abstract_deadline %}
+          var absM = moment.tz({{ conf.abstract_deadline | jsonify }}, timezone);
+          if (absM.isValid()) inviteAbstractStr = absM.format('ddd, MMM D, YYYY, HH:mm') + ' (' + timezone + ')';
+          {% endif %}
+
+          var outlookUrl = buildOutlookEventUrl({
+            subject: inviteSubject,
+            start: confDate,
+            durationMinutes: 60,
+            location: confPlace,
+            body: buildInviteBody({
+              title: confTitle,
+              year: confYear,
+              fullName: {{ conf.full_name | jsonify }},
+              deadlineStr: inviteDeadlineStr,
+              abstractStr: inviteAbstractStr,
+              dateStr: {{ conf.date | jsonify }},
+              place: confPlace,
+              subs: {{ conf.sub | join: ', ' | jsonify }},
+              link: confLink,
+              paperslink: {{ conf.paperslink | jsonify }},
+              pwclink: {{ conf.pwclink | jsonify }},
+              note: {{ conf.note | jsonify }},
+              sourceUrl: '{{ site.url }}{{ site.baseurl }}/conference?id={{ conf.id }}'
+            })
+          });
 
           var inviteLink = document.createElement('a');
-          inviteLink.href = mailtoUrl;
+          inviteLink.href = outlookUrl;
+          inviteLink.target = '_blank';
+          inviteLink.rel = 'noopener';
           inviteLink.className = 'invite-link';
-          inviteLink.title = 'Email this deadline as an invitation to others';
-          inviteLink.setAttribute('aria-label', 'Email this deadline as an invitation to others');
+          inviteLink.title = 'Schedule a calendar event in Outlook and invite others';
+          inviteLink.setAttribute('aria-label', 'Schedule a calendar event in Outlook and invite others');
           inviteLink.innerHTML = '<svg viewBox="2 3 20 18" aria-hidden="true"><path d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5zm2.4 0 7.6 5.3L19.6 5H4.4zM20 7.2l-7.4 5.2a1 1 0 0 1-1.2 0L4 7.2V19h16V7.2z"/></svg><span>Invite</span>';
           var inviteNode = document.querySelector('#{{conf.id}} .invite');
           if (inviteNode) {
