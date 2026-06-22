@@ -14,6 +14,32 @@ submission deadlines. Published via **GitHub Pages from the `gh-pages` branch**
 - The site, a per-subject API, and `conferences.json` are generated at build
   time by `_plugins/api_json_generator.rb`. You only ever edit the YAML.
 
+## How the build & rendering work
+
+You almost never touch these files, but knowing the flow helps when a change
+doesn't show up or the build breaks.
+
+- **Two Jekyll plugins run at build time** (`safe: true`, so they work on
+  GitHub Pages):
+  - `_plugins/api_json_generator.rb` flattens every `_data/conferences/*.yml`
+    list into one array, then emits the JSON consumed by tools/agents:
+    `/conferences.json` (all), `/api/{SUB}.json` (one per subject tag),
+    `/api/upcoming.json` (non-`TBA` deadlines), `/api/index.json` (endpoint
+    directory). Entries without an `id` are skipped.
+  - `_plugins/data_page_generator.rb` (generic third-party plugin) renders a
+    standalone page per record from the `_pages/conference.html` template,
+    driven by the `page_gen` block in `_config.yml`.
+- **`index.html` is a Liquid + client-JS app, not server-rendered cards.**
+  `_includes/load_conferences.html` concatenates all per-venue lists into one
+  Liquid array; the page emits the data into the DOM and the `_includes/*.js`
+  files do the live work: countdowns and timezone conversion (moment-timezone),
+  subject filtering (`multiselect_handler.js`), the .ics / calendar export
+  (`calendar.js`, `_layouts/calendar.ics`), and the predicted-edition link
+  guessing (`predict_potential_calls.js`). The card template keys off a `note`
+  starting with `Predicted` for distinct styling — see the conventions below.
+- **Result:** edits to `_data/conferences/*.yml` propagate everywhere (cards,
+  JSON API, per-conference pages, calendar) with no other file changes.
+
 ## Entry schema
 
 Required: `title`, `year`, `id`, `link`, `deadline`, `timezone`, `date`,
