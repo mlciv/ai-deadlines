@@ -1,4 +1,14 @@
-- title: ARR
+- title: ARR-Oct-2026
+  year: 2026
+  id: arr2610
+  link: https://aclrollingreview.org/dates
+  deadline: '2026-10-12 23:59:00'
+  timezone: UTC-12
+  place: TBA
+  date: TBA
+  sub: ['NLP']
+  note: May commit to NAACL2027 and COLING2027. More info <a href="https://aclrollingreview.org/dates">here</a>.
+- title: ARR-Aug-2026
   year: 2026
   id: arr2608
   link: https://aclrollingreview.org/dates
@@ -10,7 +20,7 @@
   end: 2027-08-01
   sub: ['NLP']
   note: May commit to EACL2027. More info <a href="https://aclrollingreview.org/dates">here</a>.
-- title: ARR
+- title: ARR-May-2026
   year: 2026
   id: arr2605
   link: https://aclrollingreview.org/dates
@@ -22,7 +32,7 @@
   end: 2027-08-01
   sub: ['NLP']
   note: May commit to EMNLP2026 and AACL2026. More info <a href="https://aclrollingreview.org/dates">here</a>.
-- title: ARR
+- title: ARR-Jan-2026
   year: 2026
   id: arr2601
   link: https://aclrollingreview.org/dates
@@ -34,7 +44,7 @@
   end: 2026-07-07
   sub: ['NLP']
   note: All submissions should be done through ARR. More info <a href="https://aclrollingreview.org/dates">here</a>.
-- title: ARR
+- title: ARR-May-2025
   year: 2025
   id: arr2505
   link: https://aclrollingreview.org/dates
@@ -46,7 +56,7 @@
   end: 2026-08-01
   sub: ['NLP']
   note: All submissions should be done through ARR. More info <a href="https://aclrollingreview.org/dates">here</a>.
-- title: ARR
+- title: ARR-Jul-2025
   year: 2025
   id: arr2507
   link: https://aclrollingreview.org/dates
@@ -58,7 +68,7 @@
   end: 2026-08-01
   sub: ['NLP']
   note: All submissions should be done through ARR. More info <a href="https://aclrollingreview.org/dates">here</a>.
-- title: ARR
+- title: ARR-Oct-2025
   year: 2025
   id: arr2510
   link: https://aclrollingreview.org/dates
