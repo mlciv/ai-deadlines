@@ -9,7 +9,7 @@
   date: June 17-21, 2027
   start: '2027-06-17'
   end: '2027-06-21'
-  hindex: 389
+  hindex: 450
   sub:
   - CV
   note: Predicted deadline based on historical CVPR pattern (past deadlines — 2025 Nov 13, 2024 Nov 15, 2023 Nov 17). Please verify on the official conference website. More info <a href='https://cvpr.thecvf.com/Conferences/2027/CallForPapers'>here</a>.
@@ -24,7 +24,7 @@
   date: June 17-21, 2026
   start: 2026-06-17
   end: 2026-06-21
-  hindex: 389
+  hindex: 450
   sub:
   - CV
   note: Mandatory paper registration deadline typically 2 weeks before paper deadline.
@@ -40,7 +40,7 @@
   date: June 10-17, 2025
   start: '2025-06-10'
   end: '2025-06-17'
-  hindex: 389
+  hindex: 450
   sub:
   - CV
   paperslink: https://openaccess.thecvf.com/CVPR2025
@@ -56,7 +56,7 @@
   date: June 17-21, 2024
   start: 2024-06-17
   end: 2024-06-21
-  hindex: 389
+  hindex: 450
   sub:
   - CV
   paperslink: https://openaccess.thecvf.com/CVPR2024
@@ -72,6 +72,6 @@
   date: June 17-23, 2023
   start: '2023-06-17'
   end: '2023-06-23'
-  hindex: 389
+  hindex: 450
   sub:
   - CV

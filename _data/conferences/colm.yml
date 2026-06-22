@@ -9,7 +9,6 @@
   date: Oct 06-09, 2027
   start: '2027-10-06'
   end: '2027-10-09'
-  hindex: 389
   sub:
   - NLP
   - ML
@@ -25,7 +24,6 @@
   date: Oct 06-09, 2026
   start: 2026-10-06
   end: 2026-10-09
-  hindex: 389
   sub:
   - NLP
   - ML
@@ -41,7 +39,6 @@
   date: Oct 7-09, 2025
   start: 2025-10-07
   end: 2025-10-09
-  hindex: 389
   sub:
   - NLP
   - ML

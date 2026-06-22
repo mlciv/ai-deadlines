@@ -8,7 +8,7 @@
   date: October 2027
   start: '2027-10-02'
   end: '2027-10-08'
-  hindex: 389
+  hindex: 256
   sub: ['CV']
   note: Predicted deadline based on historical ICCV biennial pattern (past deadlines — 2025 Mar 7, 2023 Mar 8). Host city Hong Kong confirmed by CVF; dates and deadline not yet announced. Please verify on the official conference website. More info <a href='https://www.thecvf.com/?page_id=100'>here</a>.
 - title: ICCV
@@ -22,7 +22,7 @@
   date: Oct 19-23, 2025
   start: 2025-10-19
   end: 2025-10-23
-  hindex: 389
+  hindex: 256
   sub: ['CV']
   paperslink: https://openaccess.thecvf.com/ICCV2025
   note: Mandatory paper registration deadline on March 03, 2025. More info <a href='https://iccv.thecvf.com/'>here</a>.

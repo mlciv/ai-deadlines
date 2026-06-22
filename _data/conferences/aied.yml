@@ -9,7 +9,6 @@
   date: June 29 - July 24, 2027
   start: '2027-06-29'
   end: '2027-07-03'
-  hindex: 389
   sub:
   - NLP
   - ML
@@ -27,7 +26,6 @@
   date: June 29 - July 24, 2026
   start: 2026-06-29
   end: 2025-07-3
-  hindex: 389
   sub:
   - NLP
   - ML
@@ -44,7 +42,6 @@
   date: July 22-24, 2025
   start: 2025-07-22
   end: 2025-07-24
-  hindex: 389
   sub:
   - NLP
   - ML
