@@ -1,14 +1,16 @@
 - title: NAACL
   year: 2027
   id: naacl27
-  link: https://naacl.org/
+  link: https://2027.naacl.org/
   deadline: '2026-10-12 23:59:00'
   timezone: UTC-12
-  place: TBA
-  date: TBA
+  place: San Francisco, CA, USA
+  date: June 1-5, 2027
+  start: '2027-06-01'
+  end: '2027-06-05'
   hindex: 132
   sub: ['NLP']
-  note: Predicted — NAACL 2027 expected to use ARR, with commitment from the October 2026 cycle (ARR submission deadline Oct 12, 2026). Conference dates and venue not yet announced; ARR participation not yet officially confirmed. Please verify on the official conference website. More info <a href='https://naacl.org/'>here</a>.
+  note: All submissions via ARR — commit from the October 2026 cycle (ARR submission deadline Oct 12, 2026). More info <a href='https://2027.naacl.org/'>here</a>.
 - title: NAACL
   year: 2025
   id: naacl25

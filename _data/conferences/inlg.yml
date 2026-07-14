@@ -10,12 +10,12 @@
   end: '2027-09-05'
   sub:
   - NLP
-  note: Predicted deadline based on historical INLG pattern (past deadlines — 2026 Jul 15, 2025 Jul 18, 2024 May 31). Please verify on the official conference website. More info <a href='https://www.siggen.org/INLG-conferences.html'>here</a>.
+  note: Predicted deadline based on historical INLG pattern (past deadlines — 2026 Jul 18, 2025 Jul 18, 2024 May 31). Please verify on the official conference website. More info <a href='https://www.siggen.org/INLG-conferences.html'>here</a>.
 - title: INLG
   year: 2026
   id: inlg26
   link: https://2026.inlgmeeting.org/
-  deadline: '2026-07-15 23:59:59'
+  deadline: '2026-07-18 23:59:59'
   timezone: UTC-12
   place: Utrecht, the Netherlands
   date: October 17-21, 2026
@@ -23,7 +23,7 @@
   end: '2026-10-21'
   sub:
   - NLP
-  note: Direct paper and demo submission deadline July 15, 2026 (AoE). ARR commitment
+  note: Direct paper and demo submission deadline extended to July 18, 2026 (AoE). ARR commitment
     deadline August 5, 2026. Notification August 15, 2026. More info <a href='https://2026.inlgmeeting.org/calls.html'>here</a>.
 - title: INLG
   year: 2025
