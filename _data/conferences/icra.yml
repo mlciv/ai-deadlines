@@ -2,17 +2,17 @@
   year: 2027
   id: icra27
   full_name: IEEE International Conference on Robotics and Automation
-  link: https://2027.ieee-icra.org/contribute/
+  link: https://2027.ieee-icra.org/announcements/call-for-technical-papers/
   deadline: '2026-09-15 23:59:59'
   timezone: America/Los_Angeles
-  place: TBA
-  date: June 1-5, 2027
-  start: '2027-06-01'
-  end: '2027-06-05'
+  place: Seoul, South Korea
+  date: May 24-28, 2027
+  start: '2027-05-24'
+  end: '2027-05-28'
   hindex: 119
   sub:
   - RO
-  note: Predicted deadline based on historical ICRA pattern (past deadlines — 2025 Sep 15, 2024 Sep 15, 2023 Sep 15). Please verify on the official conference website. More info <a href='https://2027.ieee-icra.org/contribute/'>here</a>.
+  note: Contributed paper submission deadline September 15, 2026 (11:59 PST). More info <a href='https://2027.ieee-icra.org/announcements/call-for-technical-papers/'>here</a>.
 - title: ICRA
   year: 2026
   id: icra26
