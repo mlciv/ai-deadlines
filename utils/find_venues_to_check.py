@@ -56,12 +56,13 @@ def is_tba(value):
     return value is not None and str(value).strip().upper() == "TBA"
 
 
-def collect(days_ahead, days_behind):
+def collect(days_ahead, days_behind, predicted_days):
     now = datetime.now()
     lo, hi = now - timedelta(days=days_behind), now + timedelta(days=days_ahead)
+    pred_hi = now + timedelta(days=predicted_days)
     current_year = now.year
 
-    tba, close = [], []
+    tba, close, predicted = [], [], []
     for path in sorted(glob.glob(os.path.join(CONF_DIR, "*.yml"))):
         try:
             entries = yaml.safe_load(open(path, encoding="utf-8"))
@@ -91,14 +92,24 @@ def collect(days_ahead, days_behind):
                     tba.append(rec)
                 continue
             dt = parse_deadline(dl)
-            if dt and lo <= dt <= hi:
+            if not dt:
+                continue
+            if lo <= dt <= hi:
                 delta = (dt - now).days
                 when = f"in {delta}d" if delta >= 0 else f"{-delta}d ago"
                 rec["reason"] = f"deadline {when}" + (" (predicted)" if rec["predicted"] else "")
                 close.append(rec)
+            elif rec["predicted"] and hi < dt <= pred_hi:
+                # Estimated deadline still weeks out but inside the predicted
+                # look-ahead - the official CFP may now be published.
+                rec["reason"] = f"predicted deadline in {(dt - now).days}d — verify for official CFP"
+                predicted.append(rec)
 
     close.sort(key=lambda r: parse_deadline(r["deadline"]) or now)
-    return {"tba": tba, "close": close, "window": {"back_days": days_behind, "ahead_days": days_ahead}}
+    predicted.sort(key=lambda r: parse_deadline(r["deadline"]) or now)
+    return {"tba": tba, "close": close, "predicted": predicted,
+            "window": {"back_days": days_behind, "ahead_days": days_ahead,
+                       "predicted_days": predicted_days}}
 
 
 def main():
@@ -115,9 +126,12 @@ def main():
     ap.add_argument("--urgent-days", type=int, default=7,
                     help="A deadline within +/- this many days triggers the "
                          "faster every-2-days cadence.")
+    ap.add_argument("--predicted-days", type=int, default=60,
+                    help="Also check predicted (estimated) entries whose "
+                         "estimated deadline is within this many days.")
     args = ap.parse_args()
 
-    result = collect(args.days_ahead, args.days_behind)
+    result = collect(args.days_ahead, args.days_behind, args.predicted_days)
 
     if args.gate:
         now = datetime.now()
@@ -125,7 +139,8 @@ def main():
                   if abs((parse_deadline(r["deadline"]) - now).days) <= args.urgent_days]
         if now.isoweekday() == args.anchor_weekday:
             print(f"ACT: weekly baseline run ({len(result['tba'])} TBA, "
-                  f"{len(result['close'])} in window).")
+                  f"{len(result['close'])} in window, "
+                  f"{len(result['predicted'])} predicted <{args.predicted_days}d).")
             sys.exit(0)
         if urgent and now.toordinal() % 2 == 0:
             print(f"ACT: {len(urgent)} deadline(s) within {args.urgent_days}d "
@@ -142,8 +157,8 @@ def main():
         print(json.dumps(result, indent=2, default=str))
         return
 
-    tba, close = result["tba"], result["close"]
-    if not tba and not close:
+    tba, close, predicted = result["tba"], result["close"], result["predicted"]
+    if not tba and not close and not predicted:
         print("Nothing to check: no TBA editions and no deadlines in the window.")
         return
 
@@ -157,6 +172,13 @@ def main():
               f"(-{w['back_days']}d..+{w['ahead_days']}d) ==")
         for r in close:
             print(f"  {r['title']} {r['year']}  {r['deadline']}  {r['reason']}")
+            print(f"      [{r['file']}#{r['id']}]  {r['link']}")
+    if predicted:
+        w = result["window"]
+        print(f"\n== Predicted, deadline within {w['predicted_days']}d ({len(predicted)}) "
+              f"— check whether the official CFP is now published ==")
+        for r in predicted:
+            print(f"  {r['title']} {r['year']}  est. {r['deadline']}  {r['reason']}")
             print(f"      [{r['file']}#{r['id']}]  {r['link']}")
 
 

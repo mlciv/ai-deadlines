@@ -2,12 +2,12 @@
   year: 2027
   id: iclr27
   link: https://iclr.cc/Conferences/2027/CallForPapers
-  deadline: '2026-09-24 23:59:59'
-  abstract_deadline: TBA
+  deadline: '2026-09-25 23:59:59'
+  abstract_deadline: '2026-09-18 23:59:59'
   timezone: UTC-12
   place: TBA
-  date: Apr 24-28, 2027
-  start: '2027-04-24'
+  date: Apr 26-28, 2027
+  start: '2027-04-26'
   end: '2027-04-28'
   hindex: 304
   sub:
@@ -17,7 +17,7 @@
   - CV
   - NLP
   - SP
-  note: Predicted deadline based on historical ICLR pattern (past deadlines — 2025 Sep 24, 2024 Oct 1, 2023 Sep 28). Please verify on the official conference website. More info <a href='https://iclr.cc/Conferences/2027/CallForPapers'>here</a>.
+  note: Mandatory abstract deadline September 18, 2026 (AoE); paper submission deadline September 25, 2026 (AoE). More info <a href='https://iclr.cc/Conferences/2027/CallForPapers'>here</a>.
 - title: ICLR
   year: 2026
   id: iclr26
