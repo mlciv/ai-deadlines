@@ -2,14 +2,14 @@
   year: 2026
   id: uncertainlp26
   link: https://uncertainlp.github.io/#important-dates
-  deadline: '2026-08-08 23:59:59'
+  deadline: '2026-08-07 23:59:59'
   timezone: UTC-12
-  place: TBA
-  date: Nov 15-18, 2026
-  start: '2026-11-15'
-  end: '2026-11-18'
+  place: Budapest, Hungary
+  date: October 29, 2026
+  start: '2026-10-29'
+  end: '2026-10-29'
   sub: ['NLP']
-  note: Predicted deadline based on historical UncertaiNLP pattern. Please verify on the official conference website. More info <a href='https://uncertainlp.github.io/#important-dates'>here</a>.
+  note: Direct submission deadline August 7, 2026 (AoE); ARR commitment deadline August 23, 2026. Co-located with EMNLP 2026. More info <a href='https://uncertainlp.github.io/#important-dates'>here</a>.
 - title: UncertaiNLP
   year: 2025
   id: uncertainlp25
