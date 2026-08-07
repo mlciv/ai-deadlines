@@ -6,11 +6,11 @@
   abstract_deadline: TBA
   timezone: UTC-12
   place: Sydney, Australia
-  date: November 2027
-  start: 2027-11-01
-  end: 2027-11-30
+  date: October 25-29, 2027
+  start: 2027-10-25
+  end: 2027-10-29
   sub: [DM, KR]
-  note: Predicted deadline based on historical CIKM pattern (past deadlines — 2026 May 23, 2025 May 23, 2024 May 20). Please verify on the official conference website. More info <a href='http://www.cikmconference.org/'>here</a>.
+  note: Predicted deadline based on historical CIKM pattern (past deadlines — 2026 May 23, 2025 May 23, 2024 May 20). Host Sydney, Australia and dates Oct 25-29, 2027 announced (tentative); submission deadline not yet announced. Please verify on the official conference website. More info <a href='http://www.cikmconference.org/'>here</a>.
 - title: CIKM
   year: 2026
   id: CIKM26
