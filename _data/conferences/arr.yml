@@ -1,4 +1,54 @@
 - title: ARR-Oct
+  year: 2027
+  id: arr2710
+  link: https://aclrollingreview.org/dates
+  deadline: '2027-10-11 23:59:00'
+  timezone: UTC-12
+  place: TBA
+  date: TBA
+  sub: ['NLP']
+  note: Predicted — estimated ARR October 2027 cycle, based on the ARR 10-week (70-day) cadence (2026 cycles — Jan 5, Mar 16, May 25, Aug 3, Oct 12). Commitment venues to be confirmed. More info <a href='https://aclrollingreview.org/dates'>here</a>.
+- title: ARR-Aug
+  year: 2027
+  id: arr2708
+  link: https://aclrollingreview.org/dates
+  deadline: '2027-08-02 23:59:00'
+  timezone: UTC-12
+  place: TBA
+  date: TBA
+  sub: ['NLP']
+  note: Predicted — estimated ARR August 2027 cycle, based on the ARR 10-week (70-day) cadence (2026 cycles — Jan 5, Mar 16, May 25, Aug 3, Oct 12). Commitment venues to be confirmed. More info <a href='https://aclrollingreview.org/dates'>here</a>.
+- title: ARR-May
+  year: 2027
+  id: arr2705
+  link: https://aclrollingreview.org/dates
+  deadline: '2027-05-24 23:59:00'
+  timezone: UTC-12
+  place: TBA
+  date: TBA
+  sub: ['NLP']
+  note: Predicted — estimated ARR May 2027 cycle, likely committing to EMNLP 2027 and AACL 2027 (by analogy with the May 2026 cycle). Based on the ARR 10-week (70-day) cadence. Please verify on the official ARR dates page. More info <a href='https://aclrollingreview.org/dates'>here</a>.
+- title: ARR-Mar
+  year: 2027
+  id: arr2703
+  link: https://aclrollingreview.org/dates
+  deadline: '2027-03-15 23:59:00'
+  timezone: UTC-12
+  place: TBA
+  date: TBA
+  sub: ['NLP']
+  note: Predicted — estimated ARR March 2027 cycle, based on the ARR 10-week (70-day) cadence (2026 cycles — Jan 5, Mar 16, May 25, Aug 3, Oct 12). Commitment venues to be confirmed. More info <a href='https://aclrollingreview.org/dates'>here</a>.
+- title: ARR-Jan
+  year: 2027
+  id: arr2701
+  link: https://aclrollingreview.org/dates
+  deadline: '2027-01-04 23:59:00'
+  timezone: UTC-12
+  place: TBA
+  date: TBA
+  sub: ['NLP']
+  note: Predicted — estimated ARR January 2027 cycle, the likely ACL 2027 commitment cycle. Based on the ARR 10-week (70-day) cadence; 2026 cycles fell on Jan 5, Mar 16, May 25, Aug 3, Oct 12. Please verify on the official ARR dates page. More info <a href='https://aclrollingreview.org/dates'>here</a>.
+- title: ARR-Oct
   year: 2026
   id: arr2610
   link: https://aclrollingreview.org/dates
