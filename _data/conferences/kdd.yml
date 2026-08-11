@@ -5,10 +5,10 @@
   deadline: '2027-02-10 23:59:59'
   abstract_deadline: TBA
   timezone: UTC-12
-  place: TBA
-  date: August 25-29, 2027
-  start: '2027-08-03'
-  end: '2027-08-07'
+  place: San Jose, California, USA
+  date: August 1-5, 2027
+  start: '2027-08-01'
+  end: '2027-08-05'
   sub:
   - DM
   note: Predicted deadline based on historical KDD-2 pattern (past deadlines — 2026 Feb 10, 2025 Feb 10). Please verify on the official conference website. More info <a href='https://kdd2027.kdd.org/'>here</a>.

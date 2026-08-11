@@ -6,10 +6,10 @@
   deadline: '2027-05-12 23:59:59'
   abstract_deadline: TBA
   timezone: UTC-12
-  place: TBA
-  date: December 2027
-  start: 2027-12-01
-  end: 2027-12-04
+  place: Tokyo, Japan
+  date: November 30 - December 3, 2027
+  start: 2027-11-30
+  end: 2027-12-03
   sub:
   - CG
   note: Predicted deadline based on historical SIGGRAPH Asia pattern (past deadlines — 2026 May 12, 2025 May 23, 2024 May 19). Please verify on the official conference website. More info <a href='https://asia.siggraph.org/2027/'>here</a>.

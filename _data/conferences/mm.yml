@@ -19,10 +19,10 @@
   deadline: '2025-04-08 23:59:59'
   abstract_deadline: '2025-04-12 23:59:59'
   timezone: UTC-12
-  place: TBA
-  date: October 28 - November 1, 2026
-  start: '2026-10-28'
-  end: '2026-11-01'
+  place: Rio de Janeiro, Brazil
+  date: November 10-14, 2026
+  start: '2026-11-10'
+  end: '2026-11-14'
   sub:
   - CV
   note: More info <a href='https://2026.acmmm.org/'>here</a>.

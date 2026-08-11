@@ -5,10 +5,10 @@
   deadline: '2025-10-16 23:59:59'
   abstract_deadline: '2025-10-09 23:59:59'
   timezone: UTC-12
-  place: TBA
-  date: May 2026
-  start: '2026-05-01'
-  end: '2026-05-31'
+  place: Paphos, Cyprus
+  date: May 25-29, 2026
+  start: '2026-05-25'
+  end: '2026-05-29'
   sub: ['KR', 'ML', 'RO', 'AP']
   note: Predicted deadline based on historical AAMAS pattern. Please verify on the official conference website. More info <a href='https://aamas2026.org/'>here</a>.
 - title: AAMAS

@@ -23,10 +23,10 @@
   deadline: 2025-09-11 23:59
   abstract_deadline: 2025-09-04 23:59
   timezone: UTC-12
-  place: TBA
-  date: November 26 - November 29, 2026
-  start: '2026-11-26'
-  end: '2026-11-29'
+  place: Boston, Massachusetts, USA
+  date: November 20-22, 2026
+  start: '2026-11-20'
+  end: '2026-11-22'
   sub:
   - ML
   - DM

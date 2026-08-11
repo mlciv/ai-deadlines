@@ -4,10 +4,10 @@
   link: https://iros2027-abudhabi.org/
   deadline: '2027-03-01 23:59:59'
   timezone: America/Los_Angeles
-  place: TBA
-  date: October 14-18, 2027
-  start: '2027-10-14'
-  end: '2027-10-18'
+  place: Florence, Italy
+  date: September 26 - October 1, 2027
+  start: '2027-09-26'
+  end: '2027-10-01'
   hindex: 80
   sub:
   - RO
@@ -15,17 +15,17 @@
 - title: IROS
   year: 2026
   id: iros26
-  link: https://iros2026-abudhabi.org/
+  link: https://2026.ieee-iros.org/
   deadline: '2025-03-01 23:59:59'
   timezone: America/Los_Angeles
-  place: TBA
-  date: October 14-18, 2026
-  start: '2026-10-14'
-  end: '2026-10-18'
+  place: Pittsburgh, Pennsylvania, USA
+  date: September 27 - October 1, 2026
+  start: '2026-09-27'
+  end: '2026-10-01'
   hindex: 80
   sub:
   - RO
-  note: More info <a href='https://iros2026-abudhabi.org/'>here</a>.
+  note: More info <a href='https://2026.ieee-iros.org/'>here</a>.
 - title: IROS
   year: 2024
   id: iros24

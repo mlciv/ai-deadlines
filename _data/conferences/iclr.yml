@@ -25,10 +25,10 @@
   deadline: '2025-09-24 23:59:59'
   abstract_deadline: '2025-09-19 23:59:59'
   timezone: UTC-12
-  place: TBA
-  date: Apr 24-28, 2026
-  start: 2026-04-24
-  end: 2026-04-28
+  place: Rio de Janeiro, Brazil
+  date: Apr 23-27, 2026
+  start: 2026-04-23
+  end: 2026-04-27
   hindex: 304
   sub:
   - ML
