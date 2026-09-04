@@ -1,9 +1,9 @@
 - title: CVPR
   year: 2027
   id: cvpr27
-  link: https://cvpr.thecvf.com/Conferences/2027/CallForPapers
-  deadline: '2026-11-13 23:59:59'
-  abstract_deadline: TBA
+  link: https://cvpr.thecvf.com/Conferences/2027/Dates
+  deadline: '2026-11-16 23:59:59'
+  abstract_deadline: '2026-11-10 23:59:59'
   timezone: UTC-12
   place: Seattle, Washington, USA
   date: June 20-24, 2027
@@ -12,7 +12,7 @@
   hindex: 450
   sub:
   - CV
-  note: Predicted deadline based on historical CVPR pattern (past deadlines — 2025 Nov 13, 2024 Nov 15, 2023 Nov 17). Please verify on the official conference website. More info <a href='https://cvpr.thecvf.com/Conferences/2027/CallForPapers'>here</a>.
+  note: More info <a href='https://cvpr.thecvf.com/Conferences/2027/CallForPapers'>here</a>.
 - title: CVPR
   year: 2026
   id: cvpr26
