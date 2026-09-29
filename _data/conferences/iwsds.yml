@@ -1,17 +1,4 @@
 - title: IWSDS
-  year: 2027
-  id: iwsds27
-  link: https://sites.google.com/unitn.it/iwsds27/home/
-  deadline: '2026-10-28 23:59:59'
-  abstract_deadline: TBA
-  timezone: UTC-12
-  place: TBA
-  date: February 26 - March 1, 2027
-  start: '2027-02-26'
-  end: '2027-03-01'
-  sub: ['NLP']
-  note: Predicted deadline based on historical IWSDS pattern (past deadlines — 2025 Oct 28, 2025 Jan 11, 2023 Nov 17). Please verify on the official conference website. More info <a href='https://sites.google.com/unitn.it/iwsds27/home/'>here</a>.
-- title: IWSDS
   year: 2026
   id: iwsds2026
   link: https://sites.google.com/unitn.it/iwsds26/home/
