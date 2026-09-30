@@ -112,6 +112,39 @@ def collect(days_ahead, days_behind, predicted_days):
                        "predicted_days": predicted_days}}
 
 
+def collect_all_predicted():
+    """Every predicted (estimated) future edition, regardless of how far out.
+
+    Used by the monthly full sweep, so a prediction gets checked against its
+    official CFP even when it's still many months away.
+    """
+    now = datetime.now()
+    current_year = now.year
+    out = []
+    for path in sorted(glob.glob(os.path.join(CONF_DIR, "*.yml"))):
+        try:
+            entries = yaml.safe_load(open(path, encoding="utf-8"))
+        except Exception as e:  # noqa: BLE001 - report and move on
+            print(f"# skip {path}: {e}")
+            continue
+        if not isinstance(entries, list):
+            continue
+        for e in entries:
+            if not isinstance(e, dict) or not e.get("id"):
+                continue
+            if not str(e.get("note", "")).lstrip().startswith("Predicted"):
+                continue
+            if not (isinstance(e.get("year"), int) and e["year"] >= current_year):
+                continue  # skip stale past editions
+            out.append({
+                "file": os.path.basename(path), "id": e.get("id"),
+                "title": e.get("title"), "year": e.get("year"),
+                "deadline": e.get("deadline"), "link": e.get("link"),
+            })
+    out.sort(key=lambda r: parse_deadline(r["deadline"]) or now)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--days-ahead", type=int, default=21)
@@ -129,7 +162,23 @@ def main():
     ap.add_argument("--predicted-days", type=int, default=60,
                     help="Also check predicted (estimated) entries whose "
                          "estimated deadline is within this many days.")
+    ap.add_argument("--all-predicted", action="store_true",
+                    help="List every predicted future entry regardless of how far "
+                         "out — for the monthly full predicted sweep.")
     args = ap.parse_args()
+
+    if args.all_predicted:
+        rows = collect_all_predicted()
+        if args.json:
+            print(json.dumps(rows, indent=2, default=str))
+            return
+        if not rows:
+            print("No predicted entries.")
+            return
+        print(f"== All predicted entries ({len(rows)}) — verify each against its official CFP ==")
+        for r in rows:
+            print(f"  {r['title']} {r['year']}  {r['deadline']}  [{r['file']}#{r['id']}]  {r['link']}")
+        return
 
     result = collect(args.days_ahead, args.days_behind, args.predicted_days)
 
