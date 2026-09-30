@@ -2,14 +2,14 @@
   year: 2027
   id: interspeech27
   link: https://interspeech2027.org/
-  deadline: '2027-03-02 23:59:59'
+  deadline: '2027-02-09 23:59:59'
   timezone: UTC-12
   place: São Paulo, Brazil
   date: August 29 - September 2, 2027
   start: '2027-08-29'
   end: '2027-09-02'
   sub: ['SP']
-  note: Predicted deadline based on historical InterSpeech pattern (past deadlines — 2026 Mar 2, 2025 Feb 19, 2024 Mar 1). Please verify on the official conference website. More info <a href='https://interspeech2027.org/'>here</a>.
+  note: Paper submission deadline February 9, 2027. More info <a href='https://interspeech2027.org/'>here</a>.
 - title: InterSpeech
   year: 2026
   id: interspeech26

@@ -5,10 +5,10 @@
   deadline: '2027-02-09 23:59:59'
   abstract_deadline: TBA
   timezone: UTC-12
-  place: TBA
-  date: June 29 - July 03, 2027
-  start: '2027-06-29'
-  end: '2027-07-03'
+  place: Adelaide, Australia
+  date: July 18-23, 2027
+  start: '2027-07-18'
+  end: '2027-07-23'
   sub:
   - NLP
   - ML

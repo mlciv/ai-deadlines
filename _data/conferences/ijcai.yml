@@ -3,17 +3,17 @@
   id: ijcai27
   full_name: International Joint Conference on Artificial Intelligence
   link: https://2027.ijcai.org/
-  deadline: '2027-01-19 23:59:59'
-  abstract_deadline: TBA
+  deadline: '2027-01-11 23:59:59'
+  abstract_deadline: '2027-01-04 23:59:59'
   timezone: UTC-12
-  place: TBA
-  date: August 2027
-  start: 2027-08-01
-  end: 2027-08-31
+  place: Kyoto, Japan
+  date: August 7-13, 2027
+  start: '2027-08-07'
+  end: '2027-08-13'
   hindex: 133
   sub:
   - ML
-  note: Predicted deadline based on historical IJCAI pattern (past deadlines — 2025 Jan 23, 2024 Jan 17, 2023 Jan 18). Please verify on the official conference website. More info <a href='https://2027.ijcai.org/'>here</a>.
+  note: Abstract deadline January 4, 2027 (AoE); paper submission deadline January 11, 2027 (AoE). More info <a href='https://2027.ijcai.org/'>here</a>.
 - title: IJCAI-ECAI
   year: 2026
   id: ijcai26

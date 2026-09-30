@@ -14,15 +14,15 @@
   year: 2026
   id: lak2026
   link: https://www.solaresearch.org/events/lak/lak26/
-  deadline: '2025-09-23 23:59:59'
-  abstract_deadline: '2025-09-23 23:59:59'
+  deadline: '2025-09-29 23:59:59'
+  abstract_deadline: TBA
   timezone: UTC-12
   place: Bergen, Norway
-  date: March 3-7, 2026
-  start: '2026-03-03'
-  end: '2026-03-07'
+  date: April 27 - May 1, 2026
+  start: '2026-04-27'
+  end: '2026-05-01'
   sub: ['EDU']
-  note: Predicted deadline based on historical LAK pattern. Please verify on the official conference website. More info <a href='https://www.solaresearch.org/events/lak/lak26/'>here</a>.
+  note: Research full/short paper deadline September 29, 2025 (AoE). More info <a href='https://www.solaresearch.org/events/lak/lak26/general-call/'>here</a>.
 - title: LAK
   year: 2025
   id: lak2025

@@ -2,17 +2,17 @@
   year: 2027
   id: sigir27
   link: https://sigir2027.org/en-AU/pages/attending/key-dates
-  deadline: '2027-01-22 23:59:59'
-  abstract_deadline: TBA
+  deadline: '2027-01-21 23:59:59'
+  abstract_deadline: '2027-01-14 23:59:59'
   timezone: UTC-12
-  place: TBA
-  date: July 20-24, 2027
-  start: '2027-07-20'
+  place: San Jose, California, USA
+  date: July 18-24, 2027
+  start: '2027-07-18'
   end: '2027-07-24'
   hindex: 66
   sub:
   - DM
-  note: Predicted deadline based on historical SIGIR pattern (past deadlines — 2026 Jan 22, 2024 Jan 25, 2023 Jan 31). Please verify on the official conference website. More info <a href='https://sigir2027.org/en-AU/pages/attending/key-dates'>here</a>.
+  note: Abstract deadline January 14, 2027; paper submission deadline January 21, 2027 (per official key dates). More info <a href='https://sigir2027.org/en-AU/pages/attending/key-dates'>here</a>.
 - title: SIGIR
   year: 2026
   id: sigir26

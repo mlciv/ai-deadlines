@@ -2,16 +2,16 @@
   year: 2027
   id: www27
   link: https://www2027.thewebconf.org/
-  deadline: '2026-10-13 23:59:59'
-  abstract_deadline: TBA
+  deadline: '2026-10-25 23:59:59'
+  abstract_deadline: '2026-10-18 23:59:59'
   timezone: UTC-12
   place: Dublin, Ireland
-  date: TBA, 2027
-  start: '2027-04-01'
-  end: '2027-04-30'
+  date: May 10-14, 2027
+  start: '2027-05-10'
+  end: '2027-05-14'
   hindex: 70
   sub: ['DM']
-  note: Predicted deadline based on historical WWW pattern (past deadlines — 2025 Oct 13, 2022 Oct 13). Please verify on the official conference website. More info <a href='https://www2027.thewebconf.org/'>here</a>.
+  note: Full paper abstract deadline October 18, 2026 (AoE); full paper submission deadline October 25, 2026 (AoE). More info <a href='https://www2027.thewebconf.org/research-track-papers/'>here</a>.
 - title: WWW
   year: 2026
   id: www26

@@ -3,8 +3,8 @@
   id: rss27
   full_name: 'Robotics: Science and Systems'
   link: https://roboticsconference.org/information/cfp/
-  deadline: '2027-01-30 23:59:59'
-  abstract_deadline: TBA
+  deadline: '2027-04-16 23:59:59'
+  abstract_deadline: '2026-12-04 23:59:59'
   timezone: UTC-12
   place: Athens, Greece
   date: July 6-11, 2027
@@ -13,7 +13,7 @@
   hindex: 61
   sub:
   - RO
-  note: Predicted deadline based on historical RSS pattern (past deadlines — 2026 Jan 30, 2025 Jan 24, 2024 Feb 2). Please verify on the official conference website. More info <a href='https://roboticsconference.org/information/cfp/'>here</a>.
+  note: Abstract deadline December 4, 2026 (AoE); paper submission deadline April 16, 2027 (AoE). More info <a href='https://roboticsconference.org/information/cfp/'>here</a>.
 - title: RSS
   year: 2026
   id: rss26

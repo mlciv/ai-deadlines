@@ -2,15 +2,15 @@
   year: 2027
   id: mlsys27
   link: https://mlsys.org/Conferences/2027/
-  deadline: '2026-10-30 23:59:59'
+  deadline: '2026-10-30 12:00:00'
   timezone: America/Los_Angeles
-  place: TBA
-  date: May 17-22, 2027
-  start: '2027-05-17'
-  end: '2027-05-23'
+  place: Bellevue, Washington, USA
+  date: June 21-25, 2027
+  start: '2027-06-21'
+  end: '2027-06-25'
   sub:
   - ML
-  note: Predicted deadline based on historical MLSYS pattern (past deadlines — 2025 Oct 30). Please verify on the official conference website. More info <a href='https://mlsys.org/Conferences/2027/'>here</a>.
+  note: Paper submission deadline October 30, 2026, 12:00 PM PDT. More info <a href='https://mlsys.org/Conferences/2027/CallForResearchPapers'>here</a>.
 - title: MLSYS
   year: 2026
   id: mlsys26
