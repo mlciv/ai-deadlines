@@ -1,0 +1,14 @@
+- title: ECAI
+  year: 2027 
+  id: ecai27                        
+  full_name: The European Conference on
+Artificial Intelligence
+  link: https://ecai2027.org/
+  deadline: TBA
+  abstract_deadline: TBA
+  timezone: UTC-12
+  place: Athens, Greece
+  date: October 2-7, 2027
+  start: '2027-10-02'
+  end: '2027-10-07'
+  sub: ['DM', 'KR', 'ML', 'RO', 'NLP', 'SP', 'CV', 'CG', 'HCI', 'AP', 'EDU']
