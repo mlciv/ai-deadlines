@@ -27,6 +27,11 @@ permalink:  /conference/
         </div>
       </div>
       <div id="page-content">
+        <div id="conf-note-row" class="row" style="display:none">
+          <div class="col-12">
+            <div id="conf-note"><b>Note: </b><span id="conf-note-text"></span></div>
+          </div>
+        </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12">
             <img src="{{site.baseurl}}/static/img/084-calendar.svg" class="badge-link" />
@@ -139,6 +144,11 @@ permalink:  /conference/
               $('#twitter-box').html(twitter_slug);
               {% if conf.full_name %}
                 $('#conf-full-name').text("{{conf.full_name}}");
+              {% endif %}
+              {% if conf.note %}
+                $('#conf-note-text').html({{ conf.note | jsonify }});
+                $('#conf-note').addClass("note{% if conf.note contains 'Predicted' %} predicted{% endif %}");
+                $('#conf-note-row').show();
               {% endif %}
               {% if conf.deadline == "TBA" %}
                 $('#conf-timer').html("TBA");
