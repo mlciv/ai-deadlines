@@ -274,6 +274,18 @@ a:focus {
   border-left: 3px solid #fc8181;
 }
 
+/* Larger note shown right above the countdown on the conference page */
+.note-large {
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 18px 0 10px;
+  padding: 12px 16px;
+}
+
+.note-large.predicted {
+  border-left-width: 5px;
+}
+
 /* ---------- Subject tag badges ---------- */
 .conf-sub {
   display: inline-block;
@@ -566,6 +578,10 @@ pre {
   }
   .note {
     display: none;
+  }
+  .note-large {
+    display: block;
+    font-size: 15px;
   }
   .conf-row {
     margin-bottom: 6px;
