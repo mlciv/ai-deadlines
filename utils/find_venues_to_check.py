@@ -159,9 +159,10 @@ def main():
     ap.add_argument("--urgent-days", type=int, default=7,
                     help="A deadline within +/- this many days triggers the "
                          "faster every-2-days cadence.")
-    ap.add_argument("--predicted-days", type=int, default=60,
+    ap.add_argument("--predicted-days", type=int, default=120,
                     help="Also check predicted (estimated) entries whose "
-                         "estimated deadline is within this many days.")
+                         "estimated deadline is within this many days "
+                         "(default ~4 months; these are re-checked weekly).")
     ap.add_argument("--all-predicted", action="store_true",
                     help="List every predicted future entry regardless of how far "
                          "out — for the monthly full predicted sweep.")

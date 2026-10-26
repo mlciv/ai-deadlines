@@ -30,8 +30,9 @@ run whenever a deadline is within one week.
 python utils/find_venues_to_check.py
 ```
 This prints three buckets — **TBA venues**, **Close to deadline** venues, and
-**Predicted venues whose estimated deadline is within 60 days**. These are the
-*only* venues you may edit this pass.
+**Predicted venues whose estimated deadline is within ~4 months (120 days)**.
+These are the *only* venues you may edit this pass. Because this pass runs weekly,
+every such predicted venue gets re-checked every week until its CFP appears.
 
 ## 2. Verify each listed venue against its official source
 
@@ -48,11 +49,12 @@ For every venue in the worklist:
 - **Close-to-deadline venue (predicted)**: if official dates are now out,
   **promote** it — set the real dates and drop the word `Predicted` from the
   note. If still unannounced this close, leave it predicted.
-- **Predicted venue within 60 days**: the estimated deadline is approaching, so
+- **Predicted venue within ~4 months**: the estimated deadline is approaching, so
   the official CFP may now exist. If it does, **promote** — set the real
   `deadline`, `abstract_deadline`, `place`, `date`, `start`, `end`, `link`, and
-  drop `Predicted` from the note. If still unannounced, **re-estimate**: keep it
-  `Predicted` but refresh the estimate and the "past deadlines — …" list.
+  drop `Predicted` from the note. If still unannounced, **keep it `Predicted`**
+  (optionally refresh the estimate and the "past deadlines — …" list) — it will be
+  re-checked again next week.
 
 ## Rules
 - **Never fabricate.** Every date is either sourced from an official page (cited
