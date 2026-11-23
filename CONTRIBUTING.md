@@ -1,9 +1,8 @@
 # Contributing to AI Deadlines
 
-Thanks for helping keep AI Deadlines accurate! 🎉 This site is community-maintained,
-and **every deadline you add or correct helps thousands of researchers** not miss a
-submission. Contributions of all sizes are welcome — from fixing a single date to
-adding a whole new conference.
+Thanks for helping keep AI Deadlines accurate! 🎉 This site tracks a **curated set
+of top-tier AI/ML/CV/NLP/Robotics/Speech venues**, and **every deadline you correct
+helps thousands of researchers** not miss a submission.
 
 You do **not** need to be a programmer. If you can fill in a few fields of text,
 you can contribute. The steps below look long only because they're thorough — a
@@ -14,13 +13,18 @@ typical edit takes about two minutes.
 ## What you can contribute
 
 - ⏰ **Update a deadline** that changed or was extended.
-- 🆕 **Add a new edition** of a conference (e.g. next year's).
+- 🆕 **Add a new edition** of a venue **already listed** (e.g. next year's).
 - 🌍 **Fix details** — location, dates, a broken link, a typo.
 - 🐛 **Report a problem** without fixing it — just [open an issue](../../issues/new)
   and tell us what's wrong. That's a valuable contribution too.
 
-We list **top-tier AI/ML/CV/NLP/Robotics/Speech venues**. If you're unsure whether
-a venue fits, open an issue and ask — we're happy to help.
+### Please note: the venue list is curated
+
+We intentionally keep the list focused and are **generally not adding new
+conferences**. **PRs that add a brand-new venue will usually be closed** — not a
+judgment on the venue, just scope. If you think a venue belongs here, **open an
+[issue](../../issues/new) to suggest it first** rather than sending a PR. (You're
+always welcome to maintain a fork with your own venue set.)
 
 ---
 
@@ -30,7 +34,7 @@ You don't need to install anything or use the command line. GitHub will make you
 own copy ("fork") automatically when you edit.
 
 1. Open the file for the venue in [`_data/conferences/`](_data/conferences) —
-   for example `emnlp.yml`. (New venue? See [Adding a new conference](#adding-a-new-conference).)
+   for example `emnlp.yml`. (Thinking of a new venue? Please [open an issue](../../issues/new) first — see [Suggesting a new venue](#suggesting-a-new-venue).)
 2. Click the **✏️ pencil icon** ("Edit this file"). GitHub forks the repo for you.
 3. Make your change (copy the [template](#the-entry-format) below).
 4. Scroll down, click **Propose changes**, then **Create pull request**.
@@ -166,14 +170,13 @@ Most edits are simple, but these are the things that trip people up:
 
 ---
 
-## Adding a new conference
+## Suggesting a new venue
 
-If the venue has **no file yet** in `_data/conferences/`:
-
-1. Create a new file named after the venue, lowercase, e.g. `neurips.yml`.
-2. Add a single list item using the [template](#the-entry-format) above.
-3. Make sure the `sub` tag(s) exist in [`_data/types.yml`](_data/types.yml) — if your
-   field isn't listed, mention it in your PR and we'll sort it out.
+The venue list is curated and we're **generally not adding new conferences**, so
+please **don't send a PR that adds a new venue** — it will usually be closed.
+Instead, [open an issue](../../issues/new) describing the venue and why it fits,
+and we'll consider it. Thanks for understanding — this keeps the tracker focused
+and maintainable.
 
 ---
 
