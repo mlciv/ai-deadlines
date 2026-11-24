@@ -5,13 +5,13 @@
   deadline: '2027-04-08 23:59:59'
   abstract_deadline: TBA
   timezone: UTC-12
-  place: TBA
-  date: October 28 - November 1, 2027
-  start: '2027-10-28'
-  end: '2027-11-01'
+  place: Hong Kong SAR, China
+  date: November 8-12, 2027
+  start: '2027-11-08'
+  end: '2027-11-12'
   sub:
   - CV
-  note: Predicted deadline based on historical MM pattern (past deadlines — 2025 Apr 8, 2024 Apr 8, 2023 Apr 30). Please verify on the official conference website. More info <a href='https://2027.acmmm.org/'>here</a>.
+  note: Predicted deadline based on historical MM pattern (past deadlines — 2025 Apr 8, 2024 Apr 8, 2023 Apr 30). Venue and dates confirmed (Hong Kong, Nov 8-12), paper deadline not yet announced. Please verify on the official conference website. More info <a href='https://2027.acmmm.org/'>here</a>.
 - title: MM
   year: 2026
   id: mm26

@@ -2,8 +2,8 @@
   year: 2027
   id: edm27
   link: https://educationaldatamining.org/edm2027/call-for-papers/
-  deadline: '2027-02-09 23:59:59'
-  abstract_deadline: TBA
+  deadline: '2027-02-15 23:59:59'
+  abstract_deadline: '2027-02-08 23:59:59'
   timezone: UTC-12
   place: Adelaide, Australia
   date: July 18-23, 2027
@@ -14,7 +14,7 @@
   - ML
   - CV
   - EDU
-  note: Predicted deadline based on historical EDM pattern (past deadlines — 2026 Feb 9, 2025 Feb 20, 2024 Feb 19). Please verify on the official conference website. More info <a href='https://educationaldatamining.org/edm2027/call-for-papers/'>here</a>.
+  note: Abstract deadline February 8, 2027 (AoE); full paper deadline February 15, 2027 (AoE). More info <a href='https://educationaldatamining.org/edm2027/call-for-papers/'>here</a>.
 - title: EDM
   year: 2026
   id: edm2026
